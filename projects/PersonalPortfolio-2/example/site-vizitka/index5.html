@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Заказ</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="keywords" content="изготовление визиток"/>
+    <meta name="description" content="Оперативное изготовление визиток за 30 минут"/>
+    <link href="logo.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body id="page">
+
+    <div class="form">
+        <form name="order" method="post" action="send.php">
+            <ul>
+                <li><span>Введите ваше имя</span><br><input type="text" name="name" maxlength="25" size="25" required/></li>
+                <li><span>Введите ваш E-mail</span><br><input type="email" name="email" maxlength="30" size="25" required/></li>
+                <li><span>Введите ваш телефон</span><br><input type="text" name="phone" maxlength="25" size="25" required/></li>
+                <li><select name="service"> <!-- <select name="service"> multiple чтобы выбирать не только один варик-->
+                        <option selected="selected">- Выберите услугу -</option>
+                        <option>Визитки</option>
+                        <option>Буклеты</option>
+                        <option>Листовки</option>
+                        <option>Календари</option>
+                    </select>
+                </li>
+                <li><span>Введите кол-во:</span><br><input type="text" name="sum" required/></li>
+                <li><span>Нужен ли вам дизайн:</span><br>
+                    <input type="radio" name="design" value="Дизайн нужен"/><span> Да</span></li>
+                <li><input type="radio" name="design" value="Дизайн уже есть"/><span> Нет, не нужен</span></li>
+                <li><span>Комментарий к заказу:</span><br><textarea name="comment" rows="4" cols="25"></textarea> </li>
+                <li><input class="button" type="submit" value="Отправить"></li>
+
+
+
+            </ul>
+        </form>
+    </div>
+</body>
+</html>

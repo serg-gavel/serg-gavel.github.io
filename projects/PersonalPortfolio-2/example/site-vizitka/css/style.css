@@ -1,0 +1,300 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+a img{
+    border: none;
+}
+            /*      Стили доя текста и заголовков    */
+
+h1{
+    font: bold 24px Tahoma;
+    color:#444;
+}
+
+h2 {
+font:bold 20px Tahoma;
+    color:#555;
+}
+
+h3{
+
+}
+#text p{
+    font: 16px Tahoma;
+    color:#444;
+    padding: 10px 0; /*Принято делать небольшой отступ*/
+}
+
+#text ul{
+    padding: 10px 20px; /* 10px--(сверху и снизу) 20px--(по бокам) */
+}
+
+#text ul li{
+    padding: 3px 0;
+    list-style: url('../img/tick.png'); /* Булит на списки*/
+}
+
+            /*   Стили для модулей - блоков в sidebar'e   */
+
+.contacts, .socials{
+    height:auto;
+    margin: 0 0 20px 0;
+    border-radius: 5px;
+    background: url("../img/sidebar_fon.png");
+    padding: 7px 10px 10px 10px; /* поменять потом на padding: 7px 10px 10px;*/
+}
+.contacts h3, .socials h3 {
+    font: bold 18px Tahoma;
+    color: #fff;
+    text-transform: uppercase;
+    padding:5px 0 15px 15px;
+    position:relative;
+    left:-13px;
+}
+
+.contacts h3{
+    background: url("../img/h3-red.png")no-repeat top right; /* top right - сместить чуть изображение  */
+}
+.socials h3{
+    background: url("../img/h3-blue.png")no-repeat top right;
+}
+
+.contacts p, .socials p{
+    font: 16px Tahoma;
+    color: #333;
+    padding: 4px 0;
+}
+
+.socials img{
+    padding: 10px 5px 5px 0;
+    opacity: 0.8;
+}
+.socials img:hover{
+    padding: 10px 5px 5px 0;
+    opacity: 1.0;
+}
+
+#text a, #sidebar a{
+    color: #024282;
+}
+#text a, #sidebar a:hover{
+    text-decoration: underline;
+}
+#sidebar a, #text a:hover{
+    text-decoration: none;
+}
+
+            /*   Макет  */
+#page{
+    width:100%;
+    height:auto;
+    background: #20588c;
+}
+
+#layout{
+    width:960px;
+    height:auto;
+    margin: 0 auto 30px auto;
+}
+
+#header{
+    width:100%;
+    height:auto;
+}
+#header a{
+    font-size: 0;
+    padding:0;
+}
+
+#header p{
+    font:19px Impact;
+    float:right;
+    text-align:right;
+    color:snow;
+    padding:17px;
+}
+
+#header p span{
+    font-size: 20px;
+    color:#aad6fe;
+}
+
+#menu{
+    width: 100%;
+    height:55px;
+    margin-bottom: 7px;
+    border-radius: 5px;
+    background:#0c2439; /* Для старых браузров */
+    background: -moz-linear-gradient(top, #0f2c47, #0b2033); /* Firefox 3.6+ */
+    /* Chrome 1-9, Safari 4-5 */
+    background: -webkit-gradient(linear, left top, left bottom,
+    color-stop(0%,#0f2c47), color-stop(100%,#0b2033));
+    /* Chrome 10+, Safari 5.1+ */
+    background: -webkit-linear-gradient(top, #0f2c47, #0b2033);
+    background: -o-linear-gradient(top, #0f2c47, #0b2033); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #0f2c47, #0b2033); /* IE10 */
+    background: linear-gradient(top, #0f2c47, #0b2033); /* CSS3 */
+    overflow: hidden;
+    box-shadow:3px 0 10px #143555 /* можно и убрать эту тень */
+}
+
+#menu li{
+    float:left;
+    list-style:none;
+    padding:16px 60px 0 23px;
+}
+
+#menu li a{
+    font: 18px Tahoma;
+    color:#aad6fe;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+#menu li a:hover{
+    text-shadow: 0 1px 4px #d0e7fc;
+    text-decoration: underline;
+}
+#menu li a.current{
+    text-shadow: 0 1px 4px #d0e7fc;
+    text-decoration: underline;
+}
+
+
+#content{
+    width:920px;
+    height:auto;
+    background: #f4f5f5;
+    overflow:hidden;
+    padding: 0 20px;
+    border-radius: 5px 5px 0 0; /* сверху закругляем а внизу по нулям */
+    box-shadow:0 6px 10px #143555 ; /*смещение вниз 6px растяжение тени 10px и цвет тени #*/
+}
+#pic {
+    width: 100%;
+    height: 350px;
+    background: #f4f5f5;
+    overflow: hidden;
+    border-bottom:1px solid #bfbebe;
+}
+#pic img{
+    float:left;
+	border-radius:15px 15px 15px 15px;
+	margin: 30px 15px 0 5px;
+}
+
+#pic ul{
+padding:70px 0 30px 0;
+}
+
+#pic ul li{
+    font:24px Tahoma;
+    color: #2f2f2f;
+    padding:5px 0;
+    list-style:none;
+}
+.button{
+    padding: 5px 15px;
+    font:20px Tahoma;
+    color:#5f6060;
+    background:#f1f0f0; /* Для старых браузров */
+    background: -moz-linear-gradient(top, #f1f0f0, #e9e8e8); /* Firefox 3.6+ */
+    /* Chrome 1-9, Safari 4-5 */
+    background: -webkit-gradient(linear, left top, left bottom,
+    color-stop(0%,#f1f0f0), color-stop(100%,#e9e8e8));
+    /* Chrome 10+, Safari 5.1+ */
+    background: -webkit-linear-gradient(top, #f1f0f0, #e9e8e8);
+    background: -o-linear-gradient(top, #f1f0f0, #e9e8e8); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f1f0f0, #e9e8e8); /* IE10 */
+    background: linear-gradient(top, #f1f0f0, #e9e8e8); /* CSS3 */
+    border-radius: 5px;
+    border: 1px solid #d2d2d2;
+    box-shadow: 0 1px 3px #b1b2b2;
+    text-decoration: none;
+}
+.button:hover{
+    padding: 5px 15px;
+    font:20px Tahoma;
+    color: #9b9c9c;
+    background:#f1f0f0; /* Для старых браузров */
+    background: -moz-linear-gradient(top, #f1f0f0, #e9e8e8); /* Firefox 3.6+ */
+    /* Chrome 1-9, Safari 4-5 */
+    background: -webkit-gradient(linear, left top, left bottom,
+    color-stop(0%,#f1f0f0), color-stop(100%,#e9e8e8));
+    /* Chrome 10+, Safari 5.1+ */
+    background: -webkit-linear-gradient(top, #f1f0f0, #e9e8e8);
+    background: -o-linear-gradient(top, #f1f0f0, #e9e8e8); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f1f0f0, #e9e8e8); /* IE10 */
+    background: linear-gradient(top, #f1f0f0, #e9e8e8); /* CSS3 */
+    border-radius: 5px;
+    border: 1px solid #d2d2d2;
+    box-shadow: 0 1px 3px #b1b2b2;
+    text-decoration: none;
+}
+#text{
+    width: 640px;
+    height: auto;
+    /* background: #ddd; -- после настройки блока можно его удалить*/
+    float: left;
+    margin:10px 0 50px 0;
+}
+#sidebar{
+    width: 260px;
+    height: auto;
+    /* background: #ddd; -- после настройки блока можно его удалить*/
+    float: right;
+    margin: 10px 0 0 0;
+}
+
+#footer{
+    width: 100%;
+    height:150px;
+    background: #222;
+    border-radius: 0 0 5px 5px; /*закругление сверху по нулям и внизу по бокам по 5 пикселей*/
+    box-shadow:0 6px 10px #143555
+}
+#footer ul{
+    padding:10px 20px;
+}
+
+#footer ul li{
+    float:left; /* чтобы выстроить меню в ряд ставим float:left */
+    list-style: none;
+    padding: 0 30px 0 0;
+}
+
+#footer ul li a{
+      font:16px Tahoma;
+      color: #f2f4f5;
+  }
+
+#footer ul li a:hover{
+    text-decoration: none;
+}
+
+/* Стили формы обратной связи  */
+
+.form{
+    width: 470px;
+    margin: 0 auto;
+    padding: 15px;
+}
+.form ul li{
+    list-style: none;
+    padding: 3px 0;
+}
+.form span {
+    color:#fff;
+    font:16px Tahoma;
+}
+.form h1{
+    font:24px Tahoma;
+    color:#eee;
+    text-align: center;
+}
+.form p {
+    font:16px Tahoma;
+    color:#fff;
+    text-align: center;
+}

@@ -1,0 +1,201 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+/*end fonts*/
+
+/*reset*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/*reset end*/
+
+/*main*/
+body{
+    min-height: 100%;
+}
+#header{
+    clear: both;
+    background-image: url("../img/header-hq.jpg");
+    height: 481px;
+    /*z-index: -1;*/
+    max-width: 1440px;
+}
+.header-mask{
+    background: rgba(0,0,0,1);
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(89, 89, 89, 0) 100%);
+    /*background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(89, 89, 89, 0)));*/
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.31) 0%, rgba(89, 89, 89, 0) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(89, 89, 89, 0) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.31) 0%, rgba(89, 89, 89, 0) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.31) 0%, rgba(89, 89, 89, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#595959', GradientType=0 );
+    /*z-index: 0;*/
+    height:400px;
+}
+.instagram-hash{
+    position: relative;
+    bottom:390px;
+    height:30px;
+    width: 50px;
+    z-index: 2;
+    right: 50px;
+}
+.instagram-hash a{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+.instagram-hash a::before{
+    content: url("../img/instagram.png");
+    display: inline-block;
+    vertical-align: middle;
+    font-style: normal;
+    float: left;
+    padding-left: 3px;
+    padding-top: 3px;
+}
+.instagram-hash a::after {
+    content: '#hotdogs';
+    display: inline-block;
+    position: relative;
+    bottom: 20px;
+    left: 30px;
+}
+.main-nav{
+    height:100px;
+    -webkit-box-shadow: 0 7px 5px 0 rgba(239,238,238,1);
+    -moz-box-shadow: 0 7px 5px 0 rgba(239,238,238,1);
+    box-shadow: 0 7px 5px 0 rgba(239,238,238,1);
+}
+.main-nav ul{
+    margin-top:45px;
+    margin-left:240px;
+}
+.main-nav ul>li{
+    display: inline-block;
+    padding-right: 100px;
+    margin-left: -16px;
+}
+.main-nav ul>li>a{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #2e2e2e;
+}
+.hero{
+    height: 667px;
+}
+.section-image{
+    background-image: url("../img/hot-dog8.png");
+    height: 93px;
+    width: 92px;
+    margin-top: 115px;
+}
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+.section-content{
+    margin-top:30px;
+    clear: both;
+    max-width: 1440px;
+}
+.section-content h1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 55.94px;
+    font-weight: 300;
+    text-align: center;
+    font-style: normal;
+    color: #555559;
+    line-height: 1.1;
+}
+.hero-btn {
+    margin-top: 89px;
+    height: 64px;
+    width: 310px;
+    background-color: #286782;
+    color: #eaeef1;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+.hero-btn:hover,:focus{
+   opacity: 0.9;
+}
+.section-content >.col-md-push-6{
+    padding: 0;!important;
+}
+.section-content >.col-md-pull-6{
+    padding: 0;!important;
+}
+.beef-section h3,
+.vegan-section h3 ,
+.vegitarian-section h3
+{
+    padding-top: 205px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #555559;
+    padding-left: 84px;
+}
+.vegan-section h3 {
+    padding-top: 208px;
+}
+.vegitarian-section h3{
+    padding-top: 229px;
+}
+.beef-section p,
+.vegan-section p,
+.vegitarian-section p{
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 16.5px;
+    color: #555559;
+    line-height: 1.5;
+    max-width: 570px;
+    padding-left: 121px;
+    padding-top: 31px;
+}
+#footer {
+    color: white;
+    background-color: #efefef;
+    height: 73px;
+    max-width: 1440px;
+}
+.contacts {
+    padding-left: 75px;
+    margin-top: 34px;
+}
+.copyrights p{
+    color: #555559;
+    padding-top: 21px;
+    padding-left: 30px;
+}
+
+.contacts ul{
+    padding-left: 200px;
+}
+.contacts ul>li{
+    display: inline-block;
+    padding-right: 12.5px;
+    padding-left: 12.5px;
+}
+.contacts ul>li:nth-child(1),
+.contacts ul>li:nth-child(2)
+{
+    border-right: 1px solid black;
+}
+.contacts ul>li:last-child{
+    padding-right: 0;
+}
+.contacts p,
+          a
+{
+    color: #555559;
+    font-size:95%;
+}
+

@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+.page-wrap {
+
+    min-height: 100%;
+    /* отрицательный margin равен высоте footer'a */
+    margin-bottom: -142px;
+}
+.page-wrap:after {
+    content: "";
+    display: block;
+}
+.site-footer, .page-wrap:after {
+    /* смещение должено быть той же высоты что и footer */
+    height: 142px;
+}
+.site-footer {
+    background: rgba(104, 255, 95, 0.6);
+}
+
+/*стили для текста и прочие не особо нужные*/
+.page-wrap   h1,
+h2,
+.site-footer p{
+    text-align: center;
+}
+.page-wrap p {
+    padding: 20px 20px;
+}
+.page-wrap,
+.site-footer{
+    width:980px;
+    margin: 0 auto;
+}
+button{
+    height:40px;
+    width: 200px;
+    background-color: rgba(104, 255, 95, 0.6);
+    border-radius: 10px;
+    border: none;
+}
+button:hover{
+    background-color: rgba(104, 255, 95, 0.85);
+}

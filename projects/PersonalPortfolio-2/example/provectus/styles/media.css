@@ -1,0 +1,172 @@
+@media screen and (min-width: 1500px) {
+    .instagram-hash {
+        right: 16px;
+    }
+    #header{
+        z-index: -1;
+        width: 1440px;
+        margin-left: -150px;
+    }
+   
+}
+@media only screen
+and (max-width : 1000px) {
+    .instagram-hash {
+        left: 550px;
+    }
+    .main-nav ul {
+        margin-left: 0;
+    }
+    .main-nav ul>li {
+        padding-right: 0;
+        margin-left: 60px;
+    }
+    .beef-section h3, .vegan-section h3, .vegitarian-section h3 {
+        padding-top:30px;
+    }
+    .beef-section img, .vegan-section img, .vegitarian-section img {
+        margin:0 auto;
+        padding-top:30px;
+    }
+    .contacts ul {
+        padding-left: 345px;
+        margin-top: -48px;
+    }
+}
+@media (min-width: 992px){
+
+    .col-md-6 {
+        padding: 0;
+    }
+}
+@media only screen
+and (max-width : 700px) {
+    .instagram-hash {
+        left: 440px;
+    }
+    .main-nav ul>li {
+        margin-left: 40px;
+    }
+    .contacts ul {
+        padding-left: 9px;
+        margin-top: -24px;
+    }
+    .copyrights p {
+        padding-left: 186px;
+        margin-top: 5px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #header, .header-mask {
+        height: 246px;
+    }
+    .main-nav ul > li {
+        margin-left: 6px;
+    }
+    .main-nav ul > li > a {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+    }
+    .section-image {
+        margin-top: 26px;
+    }
+    .section-content h1 {
+        font-size: 23.94px;
+    }
+    .hero-btn {
+        margin-top: 39px;
+        height: 54px;
+        width: 263px;
+        font-size: 17px;
+    }
+    .hero {
+        height: 329px;
+    }
+    .beef-section h3, .vegan-section h3, .vegitarian-section h3 {
+
+        padding-left: 0;
+    }
+    .beef-section p, .vegan-section p, .vegitarian-section p {
+
+        font-size: 15.5px;
+        padding-left: 12px;
+        padding-top: 31px;
+    }
+    .copyrights p {
+        padding-left: 64px;
+        margin-top: -5px;
+    }
+    .copyrights p, .contacts p, .contacts a{
+        font-size: 80%;
+    }
+    .contacts ul {
+        margin-left: -51px;
+        margin-top: -29px;
+        padding-left: 0;
+    }
+    .contacts ul > li {
+        padding-right: 5.5px;
+        padding-left: 5.5px;
+    }
+    #footer {
+        max-width: 340px;
+        height: 105px;
+    }
+    }
+@media screen and (max-device-width: 640px){
+    #header, .header-mask {
+        height: 246px;
+    }
+    .main-nav ul > li {
+        margin-left: 6px;
+    }
+    .main-nav ul > li > a {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+    }
+    .section-image {
+        margin-top: 26px;
+    }
+    .section-content h1 {
+        font-size: 23.94px;
+    }
+    .hero-btn {
+        margin-top: 39px;
+        height: 54px;
+        width: 263px;
+        font-size: 17px;
+    }
+    .hero {
+        height: 329px;
+    }
+    .beef-section h3, .vegan-section h3, .vegitarian-section h3 {
+
+        padding-left: 0;
+    }
+    .beef-section p, .vegan-section p, .vegitarian-section p {
+
+        font-size: 15.5px;
+        padding-left: 12px;
+        padding-top: 31px;
+    }
+    .copyrights p, .contacts p, .contacts a{
+        font-size: 80%;
+    }
+    .copyrights p {
+        padding-left: 64px;
+        margin-top: -5px;
+    }
+    .contacts ul {
+        margin-left: -51px;
+        margin-top: -29px;
+        padding-left: 0;
+    }
+    .contacts ul > li {
+        padding-right: 5.5px;
+        padding-left: 5.5px;
+    }
+    #footer {
+        max-width: 440px;
+        height: 105px;
+    }
+}
