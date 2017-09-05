@@ -1,0 +1,270 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: sans-serif;
+}
+#box{
+    margin: 0 auto;
+    width: 940px;
+}
+header{
+    height:100px;
+    background-color: #f4f4f4;
+}
+header figure{
+    margin-top: 15px;
+}
+header figure img{
+
+}
+nav{
+    float: right;
+    margin-top: -62px;
+    padding-left: 248px;
+    position: absolute;
+}
+nav li{
+    display: inline-block;
+    padding-left: 45px;
+}
+nav li a{
+    font-size: 85%;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fe9b00;
+}
+nav li a:hover {
+    color: #000000;
+}
+nav li a:active {
+     color: #000000;
+ }
+.divider{
+    margin-bottom: -10px;
+    margin-left: 40px;
+    margin-top: 14px;
+}
+.divider_2{
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-top: -5px;
+}
+.divider_3{
+    margin-bottom: -215px;
+    margin-left: 40px;
+    margin-top: 265px;
+}.divider_4{
+     margin-bottom: -10px;
+     margin-left: 40px;
+     margin-top: 23px;
+}
+#header_down{
+    margin-top: 35px;
+}
+#header_down p span{
+    margin-left: 65px;
+    margin-top: -96px;
+    position: absolute;
+    font: 85% sans-serif bold;
+    text-transform: uppercase;
+    color: #999898;
+}
+.sp {
+    padding-left: 265px;
+ }
+.sp a{
+    text-decoration: none;
+    color: #fe9b00;
+}
+.sp a:hover{
+    color: #fe9b00;
+    opacity: 0.9;
+}
+.sp a img{
+    padding-bottom: 2px;
+    padding-left: 7px;
+}
+
+.sec1{
+    border-bottom: 4px solid black;
+    float: left;
+    margin-left: 39px;
+    width: 280px;
+    height:40px;
+}
+.sec2{
+    border-bottom: 4px solid black;
+    height: 40px;
+    margin-left: 374px;
+    position: absolute;
+    width: 280px;
+
+}
+.sec3{
+    border-bottom: 4px solid black;
+    float: right;
+    height: 40px;
+    margin-right: -39px;
+    width: 280px;
+}
+.sec1, .sec2, .sec3 p{
+    color: #5d5d5d;
+    margin-bottom:40px;
+}
+.head_ul li{
+    color:black;
+}
+
+.sec2 li{
+    list-style-image: url("../img/elem2.jpg");
+    font-size: 95%;
+    line-height: 1.3;
+}
+.head_ul{
+    margin-bottom: 35px;
+    padding-left: 19px;
+}
+.head_ul li{
+    list-style-image: url("../img/arrow_blank.jpg");
+    padding-left: 5px;
+    font:85% sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.sp a{
+    padding-top: 15px;
+    font-size: 85%;
+    line-height: 1.3;
+}
+.head_ul ul li{
+    padding-top: 15px;
+    font-size: 85%;
+    line-height: 1.3;
+}
+.clear{
+    clear: both;
+}
+.ul_read{
+    padding-left: 19px;
+}
+.ul_read li{
+    list-style-image: url("../img/arrow_blank.jpg");
+    font-weight: bold;
+    font-size: 90%;
+}
+.ul_read li a{
+    text-decoration: none;
+    color: #fe9b00;
+    list-style-image: url("../img/arrow_blank.jpg");
+}.ul_read a:hover{
+    color: #fe9b00;
+    opacity:0.8;
+}
+.p_g{
+    font-size: 13px;
+    font-style: italic;
+    font-weight: bold;
+}
+.p_g{
+    color:black;
+}
+#lower_content{
+    margin-left: 32px;
+    margin-top: 280px;
+    position: relative;
+}
+#div_pic{
+    width: 940px;
+    margin-left: 38px;
+    padding-top: 234px;
+}
+#div_pic img{
+    padding-right: 16px;
+}
+#div_pic img:hover{
+    opacity: 0.8;
+}
+.blog{
+    float:left;
+    width:690px;
+    height:100px;
+}
+.connect_socials{
+    float:right;
+    width:250px;
+    height: 100px;
+}
+#socials ul{
+    padding-left: 58px;
+    padding-top: 22px;
+}
+#socials li{
+    list-style-image: url("../img/arrow_blank.jpg");
+    font-weight: bold;
+    font-size: 75%;
+    text-transform: uppercase;
+}
+#socials p{
+    margin-left:40px;
+}
+.soc_icons li{
+    display: inline-block;
+}
+.soc_icons li a{
+    margin-right:9px;
+}
+.soc_icons li img:hover{
+    opacity: 0.6;
+}
+footer{
+    background-color: #e2e2e2;
+    height: 100px;
+    margin-top: 180px;
+    width: 100%;
+}
+footer ul{
+    margin-left: 200px;
+    padding-top: 30px;
+}
+footer ul li{
+    display: inline-block;
+}
+footer p,a{
+    color: #888;
+}
+footer a:hover{
+    color: #000000;
+}
+footer a{
+    font: 110% sans-serif bold;
+    padding-right: 10px;
+    text-decoration: none;
+}
+footer p{
+    padding-left: 242px;
+}
+footer span img{
+    margin-right: 15px;
+}
+footer figure img{
+    float: right;
+    margin-right: 130px;
+    margin-top: -51px;
+    position: relative;
+}
+/* стили только для IE10 IE11 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .divider img {
+        margin-bottom: -5px;
+        margin-top: 25px;
+    }
+    #socials li img{
+        border:none;
+    }
+    .sp img{
+        border:none;
+    }
+}
+

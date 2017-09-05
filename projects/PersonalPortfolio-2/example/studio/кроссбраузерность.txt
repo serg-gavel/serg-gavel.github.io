@@ -1,0 +1,5 @@
+Полностью адаптивный под:
+
+IE 11, IE 10, IE 9
+
+Google, Firefox, Opera,Safari и остальные
