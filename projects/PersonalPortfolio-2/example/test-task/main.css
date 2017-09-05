@@ -1,0 +1,255 @@
+* { margin:0; padding:0; }
+body > #wrapper {height: auto; min-height: 100%;}
+body{  font-family: Arial, Helvetica, sans-serif;  }
+html, body {
+    height: 100%;
+}
+#main {
+    clear: both;
+}
+.clear-fix:before,
+.clear-fix:after {
+    content: " ";
+    display: table;
+}
+.clear-fix:after {
+    clear: both;
+}
+* html .clear-fix {
+    height: 1%;
+}
+.clear-fix {
+    display: block;
+}
+#wrapper{
+    margin:0 auto;
+    max-width:1024px;
+    min-width:960px;
+}
+#header{
+    clear: both;
+    height: 150px;
+}
+#content{
+    margin-top:20px;
+}
+.logo-img, .div-two, .div-three{
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 15px;
+    float: left;
+}
+.logo-img{
+    width:100px;
+    background-color: #777;
+}
+.div-two{
+    width:300px;
+    background-color: #777;
+}
+.div-three{
+    width:540px;
+    background-color: #777;
+}
+#left{
+    float: left;
+    width: 170px;
+    height: 700px;
+    margin: 20px -16px 0 15px;
+    clear: both;
+    margin-bottom: 125px;
+}
+.aside-top{
+    min-height:300px;
+    background-color: #777;
+    color: white;
+}
+.aside-top li{
+    padding-top: 25px;
+    padding-left: 15px;
+}
+.aside-top li>a{
+   color:white;
+    text-decoration:none;
+}
+.aside-top li>a:hover{
+    text-decoration:underline;
+}
+.aside-top:after{
+    content: "";
+    display: block;
+    height:55px;
+}
+.aside-bottom{
+    position: inherit;
+    margin-top: 398px;
+    height: 100px;
+    width: 170px;
+    background-color: #777;
+    clear: both;
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*!*margin-top:400px;*!*/
+    /*height:100px;*/
+    /*width: 170px;*/
+    /*background-color: #777;*/
+    /*clear: both;*/
+}
+#center{
+    float: right;
+    width: 808px;
+    /* height: 800px; */
+    margin:20px 25px 35px 0;
+}
+.top-article,
+.center-article,
+.bottom-article,
+.block-text
+{
+    clear: both;
+}
+.top-article {
+    padding-left: 15px;
+}
+.block-text{
+    background-color: #DCDCDC;
+    color: #757575;
+    height: 200px;
+    width: 780px;
+    font-size: 14px;
+    content: inherit;
+}
+.block-text h3{
+    padding-top: 25px;
+    padding-left: 25px;
+}
+.block-text ul{
+    padding-top:20px;
+    padding-left: 65px;
+}
+.block-text p{
+    padding-top:20px;
+    padding-left: 25px;
+}
+.block{
+    float: left;
+    height: 160px;
+    width: 136px;
+    margin: 25px 10px 0 15px;
+    background-color: #DCDCDC;
+    vertical-align: top;
+}
+.block-advert{
+    float: left;
+    height: 205px;
+    width: 382px;
+    margin: 25px 5px 0 15px;
+    background-color: #DCDCDC;
+}
+.block-advert p{
+    font-size: 14px;
+    padding: 25px 20px 0 20px;
+    color: #757575;
+}
+#footer {
+    /* position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0; */
+    margin: 0 auto;
+    margin-top: -300px;
+    width: 960px;
+    clear:both;
+    color: white;
+}
+#footer ul{
+    margin-top:10px;
+}
+.footer-block{
+    width: 290px;
+    min-height: 0;
+    background-color: #777;
+    float: left;
+    margin: 30px 40px 0 -14px;
+}
+.footer-block-right{
+    width: 325px;
+    height: 91px;
+    background-color: #777;
+    float: left;
+    margin-left: -10px;
+    margin-top: 30px;
+}
+.footer-block-wrap{
+    width: 325px;
+    float:right;
+}
+.footer-list li{
+    padding-top: 10px;
+    padding-left: 20px;
+    float: left;
+    width: 40%;
+    list-style: none;
+}
+.footer-list li>a{
+    text-decoration: none;
+    color: white;
+}
+.footer-list li>a:hover{
+    text-decoration: underline;
+}
+.footer-rate li{
+    padding-top: 10px;
+    margin-left: 35px;
+}
+.footer-rate li>a{
+    color: white;
+    text-decoration: none;
+}
+.footer-rate li>a:hover{
+    text-decoration: underline;
+}
+.divider,
+.divider-bottom{
+    display: inline-block;
+    border-top: 1px solid #7B7B7B;
+    clear: both;
+    width: 960px;
+}
+.divider{
+    width: 960px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.divider-bottom{
+    margin: 0 auto;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+/*Багфиксы на скролл разрешения*/
+#wrapper {
+    min-height: 100%;
+    margin-bottom: 300px;
+}
+#wrapper:after {
+    content: "";
+    display: block;
+}
+#wrapper:after {
+    height: 20px;
+}
+#footer {
+    height: 300px;
+}
+button{
+    width: auto;
+    color:white;
+    height:20px;
+    background-color: rgba(255, 83, 88, 0.82);
+}
+.footer-rate:after{
+    content: "";
+    display: block;
+    height:5px;
+}

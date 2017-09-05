@@ -1,0 +1,685 @@
+@font-face{font-family: "Century Gothic"; src: url(../fonts/Century-Gothic.ttf);}
+@font-face{font-family: "Futura Lt BT"; src: url(../fonts/Futura-lt-BT.ttf);}
+@font-face {font-family: "Futura Md BT"; src: url(../fonts/Futura-md-BT.ttf);}
+@font-face {font-family: "Lucida Grande"; src: url(../fonts/Lucida-Grande.ttf);}
+@font-face {font-family: "Edwardian Script ITC"; src: url(../fonts/Edwardian-Script.ttf);}
+
+
+/*Main styles for layout*/
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+.page-wrap {
+    min-height: 100%;
+    overflow:hidden;
+}
+.page-wrap:after {
+    content: "";
+    display: block;
+}
+.site-footer, .page-wrap:after {
+    height: 105px;
+}
+.page-wrap,
+.site-footer{
+    width:100%;
+    margin: 0 auto;
+}
+.site-footer{
+}
+.clear-fix{
+    display: block;
+    clear: both;
+    content: "";
+}
+
+/*Styles for page*/
+.main{
+    margin: 0 auto;
+    width: 1200px;
+    height:100%;
+    clear: both;
+
+}
+.left-side{
+    float: left;
+    width: 450px;
+    height: 150px;
+    margin-left: 5px;
+    clear: both;
+}
+.right-side{
+    float: left;
+    width:600px;
+    height:150px;
+    margin-left: 126px;
+}
+.header-logo h2{
+    margin-top: 4px;
+    margin-left: 9px;
+    font: 54.42pt "Edwardian Script ITC";
+    color: #c7a900;
+}
+.header-logo sub{
+    margin-left: 32px;
+    font: 20.39pt "Century Gothic";
+    color: #1c285b;
+    text-transform: uppercase;
+    line-height: 15px;
+}
+.header-contacts p{
+    margin-top: 78px;
+    margin-left: 130px;
+    font: 14pt "Lucida Grande";
+    color: #1d275a;
+
+}
+.span-contacts{
+    font: 20pt "Futura Md BT";
+    line-height: 36px;
+    color: #1c285b;
+}
+
+.header-button a{
+    color: white;
+    text-decoration: none;
+}
+.header-button{
+    padding-top: 9px;
+    margin-left: 20px;
+    margin-top: -34px;
+    float: right;
+    display: inline-block;
+    width: 149px;
+    height: 32px;
+    background: #1d275a;
+    font: 14px "Futura Lt BT";
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 2px;
+    border: none;
+}
+.header-button:hover{
+    background: #c7a900;
+    cursor: hand;
+    transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -webkit-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+    text-decoration: none;
+    color: white;
+}
+.header-button>a:hover{
+    text-decoration: none;
+    color: white;
+}
+.divider{
+    background-image: url("../img/1.png");
+    position: absolute;
+    left: 0;
+    top: 158px;
+    width: 100%;
+    height: 6px;
+}
+nav.header-nav {
+    position: relative;
+    top: 26px;
+    clear: both;
+    margin-bottom: 54px;
+}
+nav.header-nav ul{
+    list-style: none;
+    margin-left: 36px;
+}
+nav.header-nav > ul > li {
+    display: inline-block;
+    margin-top: 9px;
+    margin-left: 1px;
+    margin-right: 20px; }
+nav.header-nav > ul > li > a {
+    color: #5a5a5a;
+    font: 15px "Futura Lt BT";
+    border-top: 4px solid white;
+    text-transform: uppercase;
+    padding-top: 22px;
+}
+nav.header-nav > ul > li > a:hover {
+    color: #1c285b;
+    text-decoration: none;
+    border-top-color: #1c285b;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+nav.header-nav > ul li.drop-down {
+    position: relative; }
+nav.header-nav > ul li.drop-down ul.drop-down--menu {
+    top: 35px;
+    position: absolute;
+    background-color: #1d275a;
+    box-shadow: 0 14px 68px -15px rgba(0, 0, 0, 0.75);
+    width: 200px;
+    height: 138px;
+    left: -33px; }
+nav.header-nav > ul li.drop-down ul.drop-down--menu li {
+    display: inline-block;
+    padding-top: 12px;
+    margin-top: 2px;; }
+nav.header-nav > ul li.drop-down ul.drop-down--menu li a {
+    font: 15px "Futura Lt BT";
+    color: #fff;
+    text-decoration: none;
+    padding-left: 27px;
+}
+nav.header-nav > ul li.drop-down ul.drop-down--menu li a:hover {
+    color: #c4ab2e;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+nav.header-nav > ul li.drop-down ul.drop-down--menu li img {
+    position: absolute;
+    height: 139px;
+    width: 142px;
+    left: 100%;
+    z-index: 10;
+    top: 0;
+    border-left: 1px solid white; }
+
+.hidden {
+    display: none; }
+
+element.style {
+}
+.content-img{
+    height: 233px;
+    width: 1902px;
+    background-image: url(../img/content-bg.jpg);
+    background-repeat: no-repeat;
+    background-color: #1d275a;
+    float: left;
+    left: -352px;
+    top: -11px;
+    position: relative;
+    z-index: -2;
+}
+.content-inner{
+    height: 67px;
+    background-color: #1d275a;
+    float: left;
+    width: 1902px;
+    position: relative;
+    top: -11px;
+    left: -352px;
+    clear: both;
+}
+.content-inner h1{
+    font: 26pt "Futura Lt BT";
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    top: 16px;
+    padding-left: 389px;
+}
+.inner-text{
+    float: left;
+    position: relative;
+    top: 52px;
+    width: 500px;
+    left: 36px;
+}
+.inner-text p{
+    font: 10.1pt "Lucida Grande";
+    color: #787878;
+    line-height: 1.42;
+}
+.text-info{
+    color: #1d275a!important;
+    font-weight: bold;
+}
+.slider-img{
+    width: 617px;
+    height: 566px;
+    position: relative;
+    bottom: 465px;
+    left: 573px;
+    clear: both;
+    border: 8px solid white;
+}
+
+.slider-arrow--left{
+    background-image: url(../img/arrow-left.png);
+    height: 111px;
+    width: 56px;
+    z-index: 1007;
+    display: inline-block;
+    position: absolute;
+    top: 219px;
+    left: -12px;
+}
+.slider-arrow--right{
+    background-image: url(../img/arrow-right.png);
+    height: 114px;
+    width: 56px;
+    z-index: 1007;
+    display: inline-block;
+    position: absolute;
+    top: 216px;
+    left: 47px;
+}
+.slider-arrow--left:hover{
+    opacity: 0.9;
+}
+.slider-arrow--right:hover{
+    opacity: 0.9;
+}
+.slider-circle{
+    background: #e2ddd8;
+    height: 11px;
+    width: 12px;
+    border-radius: 50%;
+    z-index: 1007;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    left: 520px;
+    margin-right: 3px;
+}
+.slider-circle:hover,
+.slider-circle:active{
+    background: #1c285b;
+}
+.content-lower{
+    margin-left: 37px;
+    margin-top: -349px;
+    margin-bottom: 20px;
+}
+.lower-divider{
+    left: -387px;
+    top: -71px;
+    height: 6px;
+}
+.block-title{
+    bottom: 35px;
+    right: 652px;
+}
+.inner-image{
+    background-image: url("../img/content-lower.jpg");
+    max-width: 367px;
+    max-height: 253px;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    overflow:hidden;
+}
+/*.inner-image:hover{*/
+    /*width: 360px;*/
+    /*height: 241px;*/
+    /*overflow: hidden;*/
+    /*-webkit-transform: scale(1.05);*/
+    /*-moz-transform: scale(1.05);*/
+    /*-o-transform: scale(1.05);*/
+    /*margin-top: 10px;*/
+    /*margin-right: 28px;*/
+
+/*}*/
+.lower-divider-center{
+    left: 1px;
+    top: -96px;
+    height: 6px;
+}
+.block-title-center{
+    bottom: 56px;
+    right: 272px;
+    overflow: hidden;
+}
+.inner-image-center{
+    margin-top: -42px;
+    background-image: url("../img/content-lower-center.jpg");
+}
+.lower-divider-right{
+    left: 1px;
+    top: -112px;
+    height: 6px;
+}
+.block-title-right{
+    bottom: 97px;
+    right: -144px;
+}
+.inner-image-right{
+    margin-top: -82px;
+    background-image: url("../img/content-lower-right.jpg");
+}
+.lower-divider,
+.lower-divider-center,
+.lower-divider-right{
+    background-image: url(../img/1.png);
+    position: relative;
+    width: 367px;
+    display: inline-block;
+}
+.block-title,
+.block-title-center,
+.block-title-right{
+    display: inline-block;
+    position: relative;
+    font: 13.5pt "Futura Lt BT";
+    color: #5a5a5a;
+    text-transform: uppercase;
+}
+.inner-image,
+.inner-image-center,
+.inner-image-right{
+    width: 367px;
+    height: 253px;
+    float: left;
+    margin-right: 20px;
+    overflow: hidden;
+}
+.inner-image--mask{
+    width: 367px;
+    height: 253px;
+    float: left;
+    margin-right: 20px;
+    background: #1c285b;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    overflow: hidden;
+}
+.inner-image--mask:hover{
+    width: 367px;
+    height: 253px;
+    float: left;
+    margin-right: 20px;
+    background: #1c285b;
+    opacity: 0.6;
+    overflow: hidden;
+}
+.mask-text{
+    font: 9.5pt "Lucida Grande";
+    color: white;
+    padding-left: 75px;
+    padding-top: 50px;
+    width: 328px;
+    line-height: 1.6;
+    opacity: 0;
+    overflow: hidden;
+    display: inline-block;
+    height: 100%;
+}
+.mask-text--img{
+    background-image: url(../img/bracket.png);
+    display: inline-block;
+    width: 20px;
+    height: 81px;
+    position: absolute;
+    margin-left: -41px;
+    margin-top: -3px;
+}
+.mask-text:hover,
+.mask-text--img:hover{
+    transform: translateX(5px) rotate(360deg);
+    -moz-transform: translateX(5px) rotate(360deg);
+    -webkit-transform: translateX(5px) rotate(360deg);
+    -o-transform: translateX(5px) rotate(360deg);
+    opacity: 0.9;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+.mask-btn{
+    width: 100px;
+    height: 34px;
+    border: 2px solid white;
+    margin-left: 55px;
+    display: inline-block;
+    margin-top: 38px;
+    padding-top: 5px;
+}
+.mask-btn:hover{
+    opacity: 0.7;
+}
+.mask-btn a{
+    padding: 10px;
+    font: 9.5pt "Futura Md BT";
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+}
+.mask-btn a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-divider{
+    background-image: url(../img/1.png);
+    position: relative;
+    left: 0;
+    bottom: 160px;
+    width: 100%;
+    height: 6px;
+    z-index: -1;
+}
+.social{
+    margin-left: 526px;
+    height: 31px;
+    width: 174px;
+    background: white;
+    margin-top: -177px;
+    z-index: 2;
+}
+.social ul{
+    margin-left: 22px;
+}
+.social ul>li{
+    list-style: none;
+    display: inline-block;
+}
+.social ul>li>a{
+    text-decoration: none;
+}
+.social ul>li>a>i{
+    font-size: 24px;
+    padding-right: 12px;
+    color: #5a5a5a;
+}
+.social ul>li>a>i:hover{
+    color: #1d275a;
+    transform: translateX(0px) rotateX(360deg);
+    -moz-transform: translateX(0px) rotateX(360deg);
+    -webkit-transform: translateX(0px) rotateX(360deg);
+    -o-transform: translateX(0px) rotateX(360deg);
+    opacity: 0.9;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+.address-list{
+    margin-left: 37px;
+    margin-top: 37px;
+    float: left;
+}
+.address-list ul>li{
+    font: 13pt "Lucida Grande";
+    color: #5a5a5a;
+}
+.address-list ul>li:first-child{
+    font: 13pt "Lucida Grande";
+    color: #5a5a5a;
+    text-transform: uppercase;
+}
+.address-list ul>li:first-child,
+.address-list ul>li:nth-child(2),
+.address-list ul>li:nth-child(3){
+    list-style: none;
+}
+.address-list ul>li:nth-child(2),
+.address-list ul>li:nth-child(3){
+    font: 11pt "Lucida Grande";
+}
+.address-list ul>li:nth-child(3){
+    padding-bottom: 13px;
+}
+.address-list ul>li:nth-child(4),
+.address-list ul>li:nth-child(5){
+    font: 11pt "Lucida Grande";
+    margin-left:19px;
+}
+.phone{
+    list-style-image: url("../img/phone-img.jpg");
+}
+.email{
+    list-style-image: url("../img/mail-img.jpg");
+}
+.email a{
+    text-decoration: none;
+    color: #1c285b;
+    font-weight: bolder;
+}
+.email a:hover{
+    text-decoration: none;
+    color: #c7a900;
+}
+.company-list{
+    width: 380px;
+    float: left;
+    margin-left: 208px;
+    margin-top: 30px;
+    margin-right: 35px;
+}
+.company-list li{
+    padding-top: 6px;
+    padding-left: 0;
+    float: left;
+    width: 42%;
+    list-style: none;
+}
+.company-list h3{
+    font: 13pt "Lucida Grande";
+    color: #5a5a5a;
+    text-transform: uppercase;
+    margin-left: 12px;
+    margin-top: 7px;
+}
+.company-list li>a,
+p{
+    font: 10pt "Lucida Grande";
+    color: #5a5a5a;
+    text-decoration: none;
+}
+.company-list a:hover{
+    color: #c4ab2f;
+}
+.newsletter{
+    margin-top:10px;
+    margin-left:10px;
+}
+.newsletter h3{
+    font: 13pt "Lucida Grande";
+    color: #5a5a5a;
+    text-transform: uppercase;
+    margin-top: 36px;
+    margin-bottom: 5px;
+}
+.newsletter p{
+    font: 10pt "Lucida Grande";
+    color: #5a5a5a;
+    text-decoration: none;
+}
+.newsletter input[type="text"]{
+    margin-top: 15px;
+    height: 39px;
+    width: 249px;
+    border: 1px solid #e2ddd8;
+    padding-left: 16px;
+}
+.newsletter input[type="text"]:active{
+    border: 1px solid #c7a900;
+}
+.newsletter input[type="submit"]{
+    margin-top: 0;
+    height: 40px;
+    width: 37px;
+    border: none;
+    margin-left: -5px;
+    background-image: url(../img/send-arrow.jpg);
+    border-right: 1px solid #e2ddd8;
+    border-left: 1px solid #e2ddd8;
+}
+.terms{
+    float:left;
+    width: 100%;
+}
+.copyright{
+    margin-left: 41px;
+    font: 8pt "Lucida Grande";
+    color: #959595;
+    text-decoration: none;
+    margin-top: 71px;
+}
+.terms-list{
+    margin-right: 14px;
+    margin-top: -16px;
+    font: 9pt "Lucida Grande";
+    color: #959595;
+    text-decoration: none;
+    float: right;
+}
+.terms-list li{
+    display: inline-block;
+}
+.terms-list li>a{
+    color: #959595;
+    text-decoration: none;
+}
+.terms-list li:nth-child(2){
+    padding-left:4px;
+    padding-right:3px;
+    border-left:1px solid #959595;
+}
+.bottom-margin{
+    margin-bottom: 242px;
+}
+
+/*Carousel*/
+
+ .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }
+
+.carousel-indicators{
+    top: 563px;
+    left: 554px !important;
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 12px !important;
+    height: 12px !important;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #e2ddd8 !important;
+    border: 1px solid #e2ddd8;
+    border-radius: 10px;
+}
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #1c285b !important;
+    border: none;
+}
+.attention{
+    display: none;
+}
