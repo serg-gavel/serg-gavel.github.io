@@ -1,0 +1,108 @@
+@media only screen and (max-width:1430px) {
+    .game-body {
+        height: 400px;
+        width: 400px;
+        margin-left: 70px;
+    }
+    /*.game-buttons {  left: 400px;  position: absolute;  }*/
+    .game-body .inner-body {
+        /*margin-top: 50px;*/
+        /*margin-left: 50px;*/
+        height: 300px;
+        width: 300px;
+    }
+    .circle-body {
+        /* margin-top: 0px; */
+        /* margin-left: 0px; */
+        height: 307px;
+        width: 308px;
+    }
+    .horizontal-line {
+        height: 18px;
+        width: 281px;
+        top: 126px;
+        left: -5px;
+        }
+    .vertical-line {
+        height: 289px;
+        width: 18px;
+        left: 126px;
+    }
+    .game-display {
+        height: 120px;
+        width: 120px;
+        top: 77px;
+        left: 74px;
+    }
+    .game-display .inner-display {
+        top: 23px;
+        width: 66px;
+        height: 30px;
+        left: 27px;
+    }
+    .game-display .inner-display p {
+        font-size: 20px;
+    }
+    .game-display .inner-buttons .restart-btn {
+        left: 9px;
+        top: 56px;
+        height: 22px;
+        width: 22px;
+    }
+    .game-display .inner-buttons .strict-btn {
+        left: 88px;
+        top: 56px;
+        height: 22px;
+        width: 22px;
+    }
+    .game-display .inner-buttons .on-btn {
+        left: 35px;
+        top: 96px;
+        height: 16px;
+        width: 23px;
+    }
+    .game-display .inner-buttons .off-btn {
+        left: 63px;
+        top: 96px;
+        height: 16px;
+        width: 23px;
+    }
+    .game-display .inner-buttons .on-btn span,
+    .game-display .inner-buttons .off-btn span{
+        font-size: 11px;
+    }
+    button.top-left,
+    button.top-right,
+    button.bottom-left,
+    button.bottom-right{
+        width: 130px;
+        height: 130px;
+    }
+    button.top-right{
+        left: 143px;
+    }
+    button.bottom-right{
+        left: 143px;
+        top: 140px;
+    }
+    button.bottom-left {
+        top: 140px;
+        left: -2px;
+
+    }
+}
+@media only screen and (max-width:1202px) {
+    .game-body {
+        margin-left: 20px;
+    }
+}
+@media only screen and (max-width:992px) {
+    .game-body {
+        margin-left: -25px;
+    }
+}
+@media only screen and (max-width:768px) {
+    .game-body {
+        margin-left: 55px;
+    }
+}

@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Bubbler+One');
+
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}  article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}  body{line-height:1}  ol,ul{list-style:none}  blockquote,q{quotes:none}  blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}  table{border-collapse:collapse;border-spacing:0}
+
+html{
+    min-height: 100%;
+    position: relative;
+}
+body{
+    /*background: #abbaab;  !* fallback for old browsers *!*/
+    /*background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*background: linear-gradient(to right, #ffffff, #abbaab); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+    background: #E0EAFC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+
+    font-family: 'Bubbler One', sans-serif;
+    margin-bottom: 40px;
+}
+/*====================================     header       ==============================================================*/
+
+.header-text{
+    padding:40px 40px 20px 30px;
+    text-align: center;
+    font-size: 300%;
+    font-family: 'Bubbler One', sans-serif;
+}
+.header-text i {
+    color: darkgreen;
+}
+/*====================================      game      ================================================================*/
+
+.game-body{
+    margin-top: 40px;
+    height: 500px;
+    width: 500px;
+    /*background: #5a97ba;*/
+    border-radius: 50%;
+    float: left;
+    /*background: #0f0c29;  !* fallback for old browsers *!*/
+    /*background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*background: linear-gradient(to right, #24243e, #302b63, #0f0c29); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
+
+    background: #D3CCE3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-box-shadow: 8px 6px 20px 6px rgba(0,0,0,0.16);
+    -moz-box-shadow: 8px 6px 20px 6px rgba(0,0,0,0.16);
+    box-shadow: 8px 6px 20px 6px rgba(0,0,0,0.16);
+    z-index: 999;
+}
+.game-body .inner-body{
+    margin-top: 50px;
+    margin-left: 50px;
+    height: 400px;
+    width: 400px;
+    /*background: #ba809d;*/
+    border-radius: 50%;
+    position: relative;
+    background: #D3CCE3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-box-shadow: 13px 13px 20px 22px rgba(0,0,0,0.09);
+    -moz-box-shadow: 13px 13px 20px 22px rgba(0,0,0,0.09);
+    box-shadow: 13px 13px 20px 22px rgba(0,0,0,0.09);
+
+
+}
+.circle-body{
+    /* margin-top: 0px; */
+    /* margin-left: 0px; */
+    height: 412px;
+    width: 410px;
+    border: 20px solid rgb(0, 0, 0);
+    border-radius: 47%;
+    position: absolute;
+    z-index: 999;
+    top: -5px;
+    left: -5px;
+}
+.vertical-line{
+    height: 380px;
+    width: 18px;
+    position: absolute;
+    background-color: rgb(7, 7, 7);
+    left: 173px;
+    top: -3px;
+    z-index: 999;
+}
+.horizontal-line{
+    height: 18px;
+    width: 375px;
+    position: absolute;
+    background-color: rgb(9, 9, 9);
+    top: 178px;
+    z-index: 999;
+}
+.game-display{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    background-color: rgb(9, 9, 9);
+    top: 115px;
+    z-index: 999;
+    border-radius: 50%;
+    left: 109px;
+}
+.game-display .inner-display{
+    top: 34px;
+    width: 80px;
+    height: 40px;
+    background-color: rgba(121, 0, 11, 0.65);
+    position: absolute;
+    left: 35px;
+    border-radius: 12px;
+    -webkit-box-shadow: inset 0px 0px 26px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 26px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 26px 0px rgba(0,0,0,0.75);
+}
+.game-display .inner-display p{
+    font-size: 25px;
+    color: #d50000;
+    padding-top: 7px;
+    font-family: 'Orbitron', sans-serif;
+    padding-left: 6px;
+}
+.game-display .inner-buttons .restart-btn{
+    left: 17px;
+    top: 80px;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: #d50000;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.75);
+    font-weight: bold;
+}
+.game-display .inner-buttons .restart-btn:hover{
+    cursor: pointer;
+}
+.game-display .inner-buttons .restart-btn:active{
+    -webkit-box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,0.75);
+}
+.game-display .inner-buttons .strict-btn{
+    left: 100px;
+    top: 80px;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: #ffb300;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.75);
+    font-weight: bold;
+}
+.game-display .inner-buttons .strict-btn:hover{
+    cursor: pointer;
+}
+.game-display .inner-buttons .strict-btn:active{
+    -webkit-box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,0.75);
+}
+.game-display .inner-buttons .on-btn{
+    left: 40px;
+    top: 115px;
+    position: absolute;
+    height: 20px;
+    width: 30px;
+    background-color: #33691e;
+    outline: none;
+    border: none;
+    -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.75);
+    border-radius: 0 0 0 20px;
+
+}
+.game-display .inner-buttons .on-btn:hover{
+    cursor: pointer;
+}
+.game-display .inner-buttons .on-btn:active{
+    -webkit-box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,0.75);
+}
+.game-display .inner-buttons .off-btn{
+    left: 78px;
+    top: 115px;
+    position: absolute;
+    height: 20px;
+    width: 30px;
+    background-color: #b71c1c;
+    outline: none;
+    border: none;
+    -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.75);
+    border-radius: 0 0 20px 0;
+}
+.game-display .inner-buttons .off-btn:hover{
+    cursor: pointer;
+}
+.game-display .inner-buttons .off-btn:active{
+    -webkit-box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,0.75);
+}
+.game-display .inner-buttons .on-btn,
+                             .off-btn{
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 12px;
+}
+.game-display .inner-buttons .restart-btn span{
+    color: whitesmoke;
+    font-size: 11px;
+    position: absolute;
+    left: 31px;
+    top: 1px;
+    font-weight: normal;
+}
+.game-display .inner-buttons .strict-btn span{
+    color: whitesmoke;
+    font-size: 11px;
+    position: absolute;
+    left: -27px;
+    top: 19px;
+    font-weight: normal;
+}
+
+.game-display .inner-buttons .on-btn{
+    padding-left: 10px;
+}
+.game-display .inner-buttons .off-btn{
+    padding-left: 2px;
+}
+.game-buttons{
+
+}
+.game-buttons button{
+    height: 100px;
+    width: 100px;
+}
+button.top-left{
+    background: #43a047;
+    position: absolute;
+    top: -1px;
+    width: 180px;
+    height: 180px;
+    z-index: 0;
+    border-radius: 900px 15px 0px 15px;
+    left: -1px;
+    outline: none;
+    border: none;
+}
+button.top-left:hover{
+    cursor: pointer;
+}
+button.top-left:active{
+    -webkit-box-shadow: inset 0px 0px 26px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 26px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 26px 0px rgba(0,0,0,0.75);
+}
+
+button.top-right{
+    background: #c2185b;
+    position: absolute;
+    top: -1px;
+    width: 180px;
+    height: 180px;
+    z-index: 0;
+    border-radius: 15px 900px 15px 0px;
+    left: 191px;
+    outline: none;
+    border: none;
+}
+button.top-right:hover{
+cursor: pointer;
+}
+button.top-right:active{
+    -webkit-box-shadow: inset 0px 0px 26px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 26px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 26px 0px rgba(0,0,0,0.75);
+}
+button.bottom-left{
+    background: #ffd600;
+    position: absolute;
+    top: 196px;
+    width: 184px;
+    height: 180px;
+    z-index: 0;
+    border-radius: 15px 15px 0px 900px;
+    left: -5px;
+    outline: none;
+    border: none;
+}
+button.bottom-left:hover{
+    cursor: pointer;
+}
+button.bottom-left:active{
+    -webkit-box-shadow: inset 0px 0px 26px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 26px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 26px 0px rgba(0,0,0,0.75);
+}
+button.bottom-right{
+    background: #0277bd;
+    position: absolute;
+    top: 194px;
+    width: 184px;
+    height: 180px;
+    z-index: 0;
+    border-radius: 0px 15px 900px 15px;
+    left: 189px;
+    outline: none;
+    border: none;
+}
+button.bottom-right:hover {
+    cursor: pointer;
+}
+button.bottom-right:active{
+    -webkit-box-shadow: inset 0px 0px 26px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 26px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 26px 0px rgba(0,0,0,0.75);
+}
+
+/*.quarter-circle{*/
+    /*height:300px;*/
+    /*width: 300px;*/
+    /*background-color: chartreuse;*/
+    /*!*position: absolute;*!*/
+    /*border-radius: 50%;*/
+/*}*/
+/*.quarter-circle::after{*/
+    /*border-right: 130px solid transparent;*/
+    /*position: relative;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================================     footer       ==============================================================*/
+.footer {
+    margin-bottom: 20px;
+    position: absolute;!important;
+    bottom: 0;
+    width: 100%;
+    /* fixed height of the footer here */
+    height: 40px;
+}
+
+.footer .container .row .my-contacts .contacts-inner{
+    margin:0 auto;
+    width: 150px;
+    position: relative;
+}
+.footer .container .row .my-contacts .contacts-inner i{
+    font-size: 300%;
+    padding-right: 5px;
+}
+.footer .container .row .my-contacts .contacts-inner a .fa-facebook-official{
+    color: #4867AA;
+}
+.footer .container .row .my-contacts .contacts-inner a .fa-twitter-square{
+    color: #41ABE1;
+}
+.footer .container .row .my-contacts .contacts-inner a .fa-github-square{
+    color: #24292E;
+}
+.footer .container .row .my-contacts .contacts-inner a .fa-facebook-official:hover,
+a .fa-twitter-square:hover,
+a .fa-github-square:hover{
+    opacity: 0.6;
+}
+
+
+
+
+
+
+/*.circle{*/
+    /*overflow:hidden;*/
+    /*display:inline-block;*/
+    /*position:relative;*/
+    /*height:160px;*/
+    /*width: 80px;*/
+/*}*/
+/*.circle:before{*/
+    /*content:"";*/
+    /*position:absolute;*/
+    /*top:0;*/
+    /*bottom:0;*/
+    /*width:160px;*/
+    /*border-radius:100%;*/
+    /*background:#369;*/
+/*}*/
+/*.circle.left::before{*/
+    /*left:0;*/
+/*}*/
+/*.circle.right::before{*/
+    /*right:0;*/
+/*}*/
+@media only screen and (max-width: 980px)  {
+    .game-body{
+        margin-left: -90px;
+
+    }
+}
