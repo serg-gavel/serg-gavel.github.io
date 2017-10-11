@@ -1115,3 +1115,31 @@ h3 {
       font-size: 15px; }
   .slick-dots li button:before {
     display: none; } }
+@media screen and (max-width: 325px){
+  .content .slider .slick-slider .slick-slider__cover .slick-slider__text {
+    top: 50px;
+    width: 215px;
+    height: 65px;
+    margin-left: 41px;
+
+  }
+  .content .slider .slick-slider .slick-slider__cover .slick-slider__text p.text-desc {
+    font-size: 15.24px;
+    line-height: 24px;
+    padding-left: 17px;
+    padding-top: 6px;
+    word-spacing: 1px;
+  }
+  header nav#mobile-nav {
+    min-width: 290px;
+    left: 0;
+  }
+  .slick-prev:before {
+    content: url("../img/menu-arrow-left.png"); }
+  .slick-prev:before {
+    content: url("../img/menu-arrow-left.png"); }
+  .slick-next:before {
+    content: url("../img/menu-arrow-right.png"); }
+.slick-next:before {
+    content: url("../img/menu-arrow-right.png"); }
+}
