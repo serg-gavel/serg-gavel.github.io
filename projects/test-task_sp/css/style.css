@@ -392,6 +392,7 @@ header {
     height: 100px;
     max-width: 1242px;
     /* width: 111%; */
+    margin: 0 auto;
     left: 0; }
     header .header-inner .header-logo {
       width: 250px;
@@ -486,6 +487,7 @@ header {
     position: relative;
     left: 0; }
     header nav .header-nav {
+      margin: 0 auto;
       max-width: 1242px;
       border-bottom: 1px solid #dddfdf;
       position: relative;
@@ -633,10 +635,8 @@ header {
             background-color: #cc9933;
             border-radius: 50%;
             position: absolute;
-            /* padding-top: 0px; */
             top: 4px;
             right: 186px;
-            /* padding-bottom: 12px; */
             margin-top: -4px;
             padding-left: 3px; }
           header nav .header-nav .nav-cart a.nav-cart__link span.nav-cart__goods {
@@ -648,7 +648,9 @@ header {
             bottom: 6px;
             left: 32px;
             font-size: 14px;
-            word-spacing: 3px; }
+            word-spacing: 3px;
+            width: 69px;
+            display: inline-block;  }
         header nav .header-nav .nav-cart span.nav-cart__authorization {
           position: relative;
           left: 38px; }
