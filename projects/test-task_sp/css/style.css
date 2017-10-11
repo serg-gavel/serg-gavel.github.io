@@ -1055,8 +1055,7 @@ h3 {
     height: 432px; }
     .content .slider .slick-slider {
       width: 100%;
-      bottom: 14px;
-      left: -59px; }
+      bottom: 14px;}
       .content .slider .slick-slider .slick-slider__cover .slick-slider__text {
         position: absolute;
         top: 98px;
