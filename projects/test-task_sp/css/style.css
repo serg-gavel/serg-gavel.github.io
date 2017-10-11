@@ -348,7 +348,7 @@ header {
         header nav#mobile-nav .mobile-nav .mobile-nav__content .mobile-nav__search .search__inner {
           margin: 0 auto; }
           header nav#mobile-nav .mobile-nav .mobile-nav__content .mobile-nav__search .search__inner form input {
-            width: 300px;
+            width: 200px;
             border: 1px solid #b9b8bd;
             border-radius: 4px;
             font-size: 14px;
