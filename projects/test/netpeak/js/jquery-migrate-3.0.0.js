@@ -1,1 +1,540 @@
-!function(e,t){"use strict";function r(r){var n=t.console;i[r]||(i[r]=!0,e.migrateWarnings.push(r),n&&n.warn&&!e.migrateMute&&(n.warn("JQMIGRATE: "+r),e.migrateTrace&&n.trace&&n.trace()))}function n(e,t,n,i){Object.defineProperty(e,t,{configurable:!0,enumerable:!0,get:function(){return r(i),n}})}e.migrateVersion="3.0.0",function(){var r=t.console&&t.console.log&&function(){t.console.log.apply(t.console,arguments)},n=/^[12]\./;r&&(e&&!n.test(e.fn.jquery)||r("JQMIGRATE: jQuery 3.0.0+ REQUIRED"),e.migrateWarnings&&r("JQMIGRATE: Migrate plugin loaded multiple times"),r("JQMIGRATE: Migrate is installed"+(e.migrateMute?"":" with logging active")+", version "+e.migrateVersion))}();var i={};e.migrateWarnings=[],void 0===e.migrateTrace&&(e.migrateTrace=!0),e.migrateReset=function(){i={},e.migrateWarnings.length=0},"BackCompat"===document.compatMode&&r("jQuery is not compatible with Quirks Mode");var a=e.fn.init,s=e.isNumeric,o=e.find,u=/\[(\s*[-\w]+\s*)([~|^$*]?=)\s*([-\w#]*?#[-\w#]*)\s*\]/,c=/\[(\s*[-\w]+\s*)([~|^$*]?=)\s*([-\w#]*?#[-\w#]*)\s*\]/g;e.fn.init=function(e){var t=Array.prototype.slice.call(arguments);return"string"==typeof e&&"#"===e&&(r("jQuery( '#' ) is not a valid selector"),t[0]=[]),a.apply(this,t)},e.fn.init.prototype=e.fn,e.find=function(e){var t=Array.prototype.slice.call(arguments);if("string"==typeof e&&u.test(e))try{document.querySelector(e)}catch(n){e=e.replace(c,function(e,t,r,n){return"["+t+r+'"'+n+'"]'});try{document.querySelector(e),r("Attribute selector with '#' must be quoted: "+t[0]),t[0]=e}catch(e){r("Attribute selector with '#' was not fixed: "+t[0])}}return o.apply(this,t)};var l;for(l in o)Object.prototype.hasOwnProperty.call(o,l)&&(e.find[l]=o[l]);e.fn.size=function(){return r("jQuery.fn.size() is deprecated; use the .length property"),this.length},e.parseJSON=function(){return r("jQuery.parseJSON is deprecated; use JSON.parse"),JSON.parse.apply(null,arguments)},e.isNumeric=function(t){var n=s(t),i=function(t){var r=t&&t.toString();return!e.isArray(t)&&r-parseFloat(r)+1>=0}(t);return n!==i&&r("jQuery.isNumeric() should not be called on constructed objects"),i},n(e,"unique",e.uniqueSort,"jQuery.unique is deprecated, use jQuery.uniqueSort"),n(e.expr,"filters",e.expr.pseudos,"jQuery.expr.filters is now jQuery.expr.pseudos"),n(e.expr,":",e.expr.pseudos,'jQuery.expr[":"] is now jQuery.expr.pseudos');var p=e.ajax;e.ajax=function(){var e=p.apply(this,arguments);return e.promise&&(n(e,"success",e.done,"jQXHR.success is deprecated and removed"),n(e,"error",e.fail,"jQXHR.error is deprecated and removed"),n(e,"complete",e.always,"jQXHR.complete is deprecated and removed")),e};var d=e.fn.removeAttr,f=e.fn.toggleClass,y=/\S+/g;e.fn.removeAttr=function(t){var n=this;return e.each(t.match(y),function(t,i){e.expr.match.bool.test(i)&&(r("jQuery.fn.removeAttr no longer sets boolean properties: "+i),n.prop(i,!1))}),d.apply(this,arguments)},e.fn.toggleClass=function(t){return void 0!==t&&"boolean"!=typeof t?f.apply(this,arguments):(r("jQuery.fn.toggleClass( boolean ) is deprecated"),this.each(function(){var r=this.getAttribute&&this.getAttribute("class")||"";r&&e.data(this,"__className__",r),this.setAttribute&&this.setAttribute("class",r||!1===t?"":e.data(this,"__className__")||"")}))};var g=!1;e.swap&&e.each(["height","width","reliableMarginRight"],function(t,r){var n=e.cssHooks[r]&&e.cssHooks[r].get;n&&(e.cssHooks[r].get=function(){var e;return g=!0,e=n.apply(this,arguments),g=!1,e})}),e.swap=function(e,t,n,i){var a,s,o={};g||r("jQuery.swap() is undocumented and deprecated");for(s in t)o[s]=e.style[s],e.style[s]=t[s];a=n.apply(e,i||[]);for(s in t)e.style[s]=o[s];return a};var h=e.data;e.data=function(t,n,i){var a;return n&&n!==e.camelCase(n)&&(a=e.hasData(t)&&h.call(this,t))&&n in a?(r("jQuery.data() always sets/gets camelCased names: "+n),arguments.length>2&&(a[n]=i),a[n]):h.apply(this,arguments)};var m=e.Tween.prototype.run;e.Tween.prototype.run=function(t){e.easing[this.easing].length>1&&(r('easing function "jQuery.easing.'+this.easing.toString()+'" should use only first argument'),e.easing[this.easing]=e.easing[this.easing].bind(e.easing,t,this.options.duration*t,0,1,this.options.duration)),m.apply(this,arguments)};var v=e.fn.load,j=e.event.fix;e.event.props=[],e.event.fixHooks={},e.event.fix=function(t){var n,i=t.type,a=this.fixHooks[i],s=e.event.props;if(s.length)for(r("jQuery.event.props are deprecated and removed: "+s.join());s.length;)e.event.addProp(s.pop());if(a&&!a._migrated_&&(a._migrated_=!0,r("jQuery.event.fixHooks are deprecated and removed: "+i),(s=a.props)&&s.length))for(;s.length;)e.event.addProp(s.pop());return n=j.call(this,t),a&&a.filter?a.filter(n,t):n},e.each(["load","unload","error"],function(t,n){e.fn[n]=function(){var e=Array.prototype.slice.call(arguments,0);return"load"===n&&"string"==typeof e[0]?v.apply(this,e):(r("jQuery.fn."+n+"() is deprecated"),e.splice(0,0,n),arguments.length?this.on.apply(this,e):(this.triggerHandler.apply(this,e),this))}}),e(function(){e(document).triggerHandler("ready")}),e.event.special.ready={setup:function(){this===document&&r("'ready' event is deprecated")}},e.fn.extend({bind:function(e,t,n){return r("jQuery.fn.bind() is deprecated"),this.on(e,null,t,n)},unbind:function(e,t){return r("jQuery.fn.unbind() is deprecated"),this.off(e,null,t)},delegate:function(e,t,n,i){return r("jQuery.fn.delegate() is deprecated"),this.on(t,e,n,i)},undelegate:function(e,t,n){return r("jQuery.fn.undelegate() is deprecated"),1===arguments.length?this.off(e,"**"):this.off(t,e||"**",n)}});var Q=e.fn.offset;e.fn.offset=function(){var t,n=this[0],i={top:0,left:0};return n&&n.nodeType?(t=(n.ownerDocument||document).documentElement,e.contains(t,n)?Q.apply(this,arguments):(r("jQuery.fn.offset() requires an element connected to a document"),i)):(r("jQuery.fn.offset() requires a valid DOM element"),i)};var b=e.param;e.param=function(t,n){var i=e.ajaxSettings&&e.ajaxSettings.traditional;return void 0===n&&i&&(r("jQuery.param() no longer uses jQuery.ajaxSettings.traditional"),n=i),b.call(this,t,n)};var w=e.fn.andSelf||e.fn.addBack;e.fn.andSelf=function(){return r("jQuery.fn.andSelf() replaced by jQuery.fn.addBack()"),w.apply(this,arguments)};var x=e.Deferred,A=[["resolve","done",e.Callbacks("once memory"),e.Callbacks("once memory"),"resolved"],["reject","fail",e.Callbacks("once memory"),e.Callbacks("once memory"),"rejected"],["notify","progress",e.Callbacks("memory"),e.Callbacks("memory")]];e.Deferred=function(t){var n=x(),i=n.promise();return n.pipe=i.pipe=function(){var t=arguments;return r("deferred.pipe() is deprecated"),e.Deferred(function(r){e.each(A,function(a,s){var o=e.isFunction(t[a])&&t[a];n[s[1]](function(){var t=o&&o.apply(this,arguments);t&&e.isFunction(t.promise)?t.promise().done(r.resolve).fail(r.reject).progress(r.notify):r[s[0]+"With"](this===i?r.promise():this,o?[t]:arguments)})}),t=null}).promise()},t&&t.call(n,n),n}}(jQuery,window);
+/*!
+ * jQuery Migrate - v3.0.0 - 2016-06-09
+ * Copyright jQuery Foundation and other contributors
+ */
+(function( jQuery, window ) {
+"use strict";
+
+
+jQuery.migrateVersion = "3.0.0";
+
+
+( function() {
+
+	// Support: IE9 only
+	// IE9 only creates console object when dev tools are first opened
+	// Also, avoid Function#bind here to simplify PhantomJS usage
+	var log = window.console && window.console.log &&
+			function() { window.console.log.apply( window.console, arguments ); },
+		rbadVersions = /^[12]\./;
+
+	if ( !log ) {
+		return;
+	}
+
+	// Need jQuery 3.0.0+ and no older Migrate loaded
+	if ( !jQuery || rbadVersions.test( jQuery.fn.jquery ) ) {
+		log( "JQMIGRATE: jQuery 3.0.0+ REQUIRED" );
+	}
+	if ( jQuery.migrateWarnings ) {
+		log( "JQMIGRATE: Migrate plugin loaded multiple times" );
+	}
+
+	// Show a message on the console so devs know we're active
+	log( "JQMIGRATE: Migrate is installed" +
+		( jQuery.migrateMute ? "" : " with logging active" ) +
+		", version " + jQuery.migrateVersion );
+
+} )();
+
+var warnedAbout = {};
+
+// List of warnings already given; public read only
+jQuery.migrateWarnings = [];
+
+// Set to false to disable traces that appear with warnings
+if ( jQuery.migrateTrace === undefined ) {
+	jQuery.migrateTrace = true;
+}
+
+// Forget any warnings we've already given; public
+jQuery.migrateReset = function() {
+	warnedAbout = {};
+	jQuery.migrateWarnings.length = 0;
+};
+
+function migrateWarn( msg ) {
+	var console = window.console;
+	if ( !warnedAbout[ msg ] ) {
+		warnedAbout[ msg ] = true;
+		jQuery.migrateWarnings.push( msg );
+		if ( console && console.warn && !jQuery.migrateMute ) {
+			console.warn( "JQMIGRATE: " + msg );
+			if ( jQuery.migrateTrace && console.trace ) {
+				console.trace();
+			}
+		}
+	}
+}
+
+function migrateWarnProp( obj, prop, value, msg ) {
+	Object.defineProperty( obj, prop, {
+		configurable: true,
+		enumerable: true,
+		get: function() {
+			migrateWarn( msg );
+			return value;
+		}
+	} );
+}
+
+if ( document.compatMode === "BackCompat" ) {
+
+	// JQuery has never supported or tested Quirks Mode
+	migrateWarn( "jQuery is not compatible with Quirks Mode" );
+}
+
+
+var oldInit = jQuery.fn.init,
+	oldIsNumeric = jQuery.isNumeric,
+	oldFind = jQuery.find,
+	rattrHashTest = /\[(\s*[-\w]+\s*)([~|^$*]?=)\s*([-\w#]*?#[-\w#]*)\s*\]/,
+	rattrHashGlob = /\[(\s*[-\w]+\s*)([~|^$*]?=)\s*([-\w#]*?#[-\w#]*)\s*\]/g;
+
+jQuery.fn.init = function( arg1 ) {
+	var args = Array.prototype.slice.call( arguments );
+
+	if ( typeof arg1 === "string" && arg1 === "#" ) {
+
+		// JQuery( "#" ) is a bogus ID selector, but it returned an empty set before jQuery 3.0
+		migrateWarn( "jQuery( '#' ) is not a valid selector" );
+		args[ 0 ] = [];
+	}
+
+	return oldInit.apply( this, args );
+};
+jQuery.fn.init.prototype = jQuery.fn;
+
+jQuery.find = function( selector ) {
+	var args = Array.prototype.slice.call( arguments );
+
+	// Support: PhantomJS 1.x
+	// String#match fails to match when used with a //g RegExp, only on some strings
+	if ( typeof selector === "string" && rattrHashTest.test( selector ) ) {
+
+		// The nonstandard and undocumented unquoted-hash was removed in jQuery 1.12.0
+		// First see if qS thinks it's a valid selector, if so avoid a false positive
+		try {
+			document.querySelector( selector );
+		} catch ( err1 ) {
+
+			// Didn't *look* valid to qSA, warn and try quoting what we think is the value
+			selector = selector.replace( rattrHashGlob, function( _, attr, op, value ) {
+				return "[" + attr + op + "\"" + value + "\"]";
+			} );
+
+			// If the regexp *may* have created an invalid selector, don't update it
+			// Note that there may be false alarms if selector uses jQuery extensions
+			try {
+				document.querySelector( selector );
+				migrateWarn( "Attribute selector with '#' must be quoted: " + args[ 0 ] );
+				args[ 0 ] = selector;
+			} catch ( err2 ) {
+				migrateWarn( "Attribute selector with '#' was not fixed: " + args[ 0 ] );
+			}
+		}
+	}
+
+	return oldFind.apply( this, args );
+};
+
+// Copy properties attached to original jQuery.find method (e.g. .attr, .isXML)
+var findProp;
+for ( findProp in oldFind ) {
+	if ( Object.prototype.hasOwnProperty.call( oldFind, findProp ) ) {
+		jQuery.find[ findProp ] = oldFind[ findProp ];
+	}
+}
+
+// The number of elements contained in the matched element set
+jQuery.fn.size = function() {
+	migrateWarn( "jQuery.fn.size() is deprecated; use the .length property" );
+	return this.length;
+};
+
+jQuery.parseJSON = function() {
+	migrateWarn( "jQuery.parseJSON is deprecated; use JSON.parse" );
+	return JSON.parse.apply( null, arguments );
+};
+
+jQuery.isNumeric = function( val ) {
+
+	// The jQuery 2.2.3 implementation of isNumeric
+	function isNumeric2( obj ) {
+		var realStringObj = obj && obj.toString();
+		return !jQuery.isArray( obj ) && ( realStringObj - parseFloat( realStringObj ) + 1 ) >= 0;
+	}
+
+	var newValue = oldIsNumeric( val ),
+		oldValue = isNumeric2( val );
+
+	if ( newValue !== oldValue ) {
+		migrateWarn( "jQuery.isNumeric() should not be called on constructed objects" );
+	}
+
+	return oldValue;
+};
+
+migrateWarnProp( jQuery, "unique", jQuery.uniqueSort,
+	"jQuery.unique is deprecated, use jQuery.uniqueSort" );
+
+// Now jQuery.expr.pseudos is the standard incantation
+migrateWarnProp( jQuery.expr, "filters", jQuery.expr.pseudos,
+	"jQuery.expr.filters is now jQuery.expr.pseudos" );
+migrateWarnProp( jQuery.expr, ":", jQuery.expr.pseudos,
+	"jQuery.expr[\":\"] is now jQuery.expr.pseudos" );
+
+
+var oldAjax = jQuery.ajax;
+
+jQuery.ajax = function( ) {
+	var jQXHR = oldAjax.apply( this, arguments );
+
+	// Be sure we got a jQXHR (e.g., not sync)
+	if ( jQXHR.promise ) {
+		migrateWarnProp( jQXHR, "success", jQXHR.done,
+			"jQXHR.success is deprecated and removed" );
+		migrateWarnProp( jQXHR, "error", jQXHR.fail,
+			"jQXHR.error is deprecated and removed" );
+		migrateWarnProp( jQXHR, "complete", jQXHR.always,
+			"jQXHR.complete is deprecated and removed" );
+	}
+
+	return jQXHR;
+};
+
+
+var oldRemoveAttr = jQuery.fn.removeAttr,
+	oldToggleClass = jQuery.fn.toggleClass,
+	rmatchNonSpace = /\S+/g;
+
+jQuery.fn.removeAttr = function( name ) {
+	var self = this;
+
+	jQuery.each( name.match( rmatchNonSpace ), function( i, attr ) {
+		if ( jQuery.expr.match.bool.test( attr ) ) {
+			migrateWarn( "jQuery.fn.removeAttr no longer sets boolean properties: " + attr );
+			self.prop( attr, false );
+		}
+	} );
+
+	return oldRemoveAttr.apply( this, arguments );
+};
+
+jQuery.fn.toggleClass = function( state ) {
+
+	// Only deprecating no-args or single boolean arg
+	if ( state !== undefined && typeof state !== "boolean" ) {
+		return oldToggleClass.apply( this, arguments );
+	}
+
+	migrateWarn( "jQuery.fn.toggleClass( boolean ) is deprecated" );
+
+	// Toggle entire class name of each element
+	return this.each( function() {
+		var className = this.getAttribute && this.getAttribute( "class" ) || "";
+
+		if ( className ) {
+			jQuery.data( this, "__className__", className );
+		}
+
+		// If the element has a class name or if we're passed `false`,
+		// then remove the whole classname (if there was one, the above saved it).
+		// Otherwise bring back whatever was previously saved (if anything),
+		// falling back to the empty string if nothing was stored.
+		if ( this.setAttribute ) {
+			this.setAttribute( "class",
+				className || state === false ?
+				"" :
+				jQuery.data( this, "__className__" ) || ""
+			);
+		}
+	} );
+};
+
+
+var internalSwapCall = false;
+
+// If this version of jQuery has .swap(), don't false-alarm on internal uses
+if ( jQuery.swap ) {
+	jQuery.each( [ "height", "width", "reliableMarginRight" ], function( _, name ) {
+		var oldHook = jQuery.cssHooks[ name ] && jQuery.cssHooks[ name ].get;
+
+		if ( oldHook ) {
+			jQuery.cssHooks[ name ].get = function() {
+				var ret;
+
+				internalSwapCall = true;
+				ret = oldHook.apply( this, arguments );
+				internalSwapCall = false;
+				return ret;
+			};
+		}
+	} );
+}
+
+jQuery.swap = function( elem, options, callback, args ) {
+	var ret, name,
+		old = {};
+
+	if ( !internalSwapCall ) {
+		migrateWarn( "jQuery.swap() is undocumented and deprecated" );
+	}
+
+	// Remember the old values, and insert the new ones
+	for ( name in options ) {
+		old[ name ] = elem.style[ name ];
+		elem.style[ name ] = options[ name ];
+	}
+
+	ret = callback.apply( elem, args || [] );
+
+	// Revert the old values
+	for ( name in options ) {
+		elem.style[ name ] = old[ name ];
+	}
+
+	return ret;
+};
+
+var oldData = jQuery.data;
+
+jQuery.data = function( elem, name, value ) {
+	var curData;
+
+	// If the name is transformed, look for the un-transformed name in the data object
+	if ( name && name !== jQuery.camelCase( name ) ) {
+		curData = jQuery.hasData( elem ) && oldData.call( this, elem );
+		if ( curData && name in curData ) {
+			migrateWarn( "jQuery.data() always sets/gets camelCased names: " + name );
+			if ( arguments.length > 2 ) {
+				curData[ name ] = value;
+			}
+			return curData[ name ];
+		}
+	}
+
+	return oldData.apply( this, arguments );
+};
+
+var oldTweenRun = jQuery.Tween.prototype.run;
+
+jQuery.Tween.prototype.run = function( percent ) {
+	if ( jQuery.easing[ this.easing ].length > 1 ) {
+		migrateWarn(
+			"easing function " +
+			"\"jQuery.easing." + this.easing.toString() +
+			"\" should use only first argument"
+		);
+
+		jQuery.easing[ this.easing ] = jQuery.easing[ this.easing ].bind(
+			jQuery.easing,
+			percent, this.options.duration * percent, 0, 1, this.options.duration
+		);
+	}
+
+	oldTweenRun.apply( this, arguments );
+};
+
+var oldLoad = jQuery.fn.load,
+	originalFix = jQuery.event.fix;
+
+jQuery.event.props = [];
+jQuery.event.fixHooks = {};
+
+jQuery.event.fix = function( originalEvent ) {
+	var event,
+		type = originalEvent.type,
+		fixHook = this.fixHooks[ type ],
+		props = jQuery.event.props;
+
+	if ( props.length ) {
+		migrateWarn( "jQuery.event.props are deprecated and removed: " + props.join() );
+		while ( props.length ) {
+			jQuery.event.addProp( props.pop() );
+		}
+	}
+
+	if ( fixHook && !fixHook._migrated_ ) {
+		fixHook._migrated_ = true;
+		migrateWarn( "jQuery.event.fixHooks are deprecated and removed: " + type );
+		if ( ( props = fixHook.props ) && props.length ) {
+			while ( props.length ) {
+			   jQuery.event.addProp( props.pop() );
+			}
+		}
+	}
+
+	event = originalFix.call( this, originalEvent );
+
+	return fixHook && fixHook.filter ? fixHook.filter( event, originalEvent ) : event;
+};
+
+jQuery.each( [ "load", "unload", "error" ], function( _, name ) {
+
+	jQuery.fn[ name ] = function() {
+		var args = Array.prototype.slice.call( arguments, 0 );
+
+		// If this is an ajax load() the first arg should be the string URL;
+		// technically this could also be the "Anything" arg of the event .load()
+		// which just goes to show why this dumb signature has been deprecated!
+		// jQuery custom builds that exclude the Ajax module justifiably die here.
+		if ( name === "load" && typeof args[ 0 ] === "string" ) {
+			return oldLoad.apply( this, args );
+		}
+
+		migrateWarn( "jQuery.fn." + name + "() is deprecated" );
+
+		args.splice( 0, 0, name );
+		if ( arguments.length ) {
+			return this.on.apply( this, args );
+		}
+
+		// Use .triggerHandler here because:
+		// - load and unload events don't need to bubble, only applied to window or image
+		// - error event should not bubble to window, although it does pre-1.7
+		// See http://bugs.jquery.com/ticket/11820
+		this.triggerHandler.apply( this, args );
+		return this;
+	};
+
+} );
+
+// Trigger "ready" event only once, on document ready
+jQuery( function() {
+	jQuery( document ).triggerHandler( "ready" );
+} );
+
+jQuery.event.special.ready = {
+	setup: function() {
+		if ( this === document ) {
+			migrateWarn( "'ready' event is deprecated" );
+		}
+	}
+};
+
+jQuery.fn.extend( {
+
+	bind: function( types, data, fn ) {
+		migrateWarn( "jQuery.fn.bind() is deprecated" );
+		return this.on( types, null, data, fn );
+	},
+	unbind: function( types, fn ) {
+		migrateWarn( "jQuery.fn.unbind() is deprecated" );
+		return this.off( types, null, fn );
+	},
+	delegate: function( selector, types, data, fn ) {
+		migrateWarn( "jQuery.fn.delegate() is deprecated" );
+		return this.on( types, selector, data, fn );
+	},
+	undelegate: function( selector, types, fn ) {
+		migrateWarn( "jQuery.fn.undelegate() is deprecated" );
+		return arguments.length === 1 ?
+			this.off( selector, "**" ) :
+			this.off( types, selector || "**", fn );
+	}
+} );
+
+
+var oldOffset = jQuery.fn.offset;
+
+jQuery.fn.offset = function() {
+	var docElem,
+		elem = this[ 0 ],
+		origin = { top: 0, left: 0 };
+
+	if ( !elem || !elem.nodeType ) {
+		migrateWarn( "jQuery.fn.offset() requires a valid DOM element" );
+		return origin;
+	}
+
+	docElem = ( elem.ownerDocument || document ).documentElement;
+	if ( !jQuery.contains( docElem, elem ) ) {
+		migrateWarn( "jQuery.fn.offset() requires an element connected to a document" );
+		return origin;
+	}
+
+	return oldOffset.apply( this, arguments );
+};
+
+
+var oldParam = jQuery.param;
+
+jQuery.param = function( data, traditional ) {
+	var ajaxTraditional = jQuery.ajaxSettings && jQuery.ajaxSettings.traditional;
+
+	if ( traditional === undefined && ajaxTraditional ) {
+
+		migrateWarn( "jQuery.param() no longer uses jQuery.ajaxSettings.traditional" );
+		traditional = ajaxTraditional;
+	}
+
+	return oldParam.call( this, data, traditional );
+};
+
+var oldSelf = jQuery.fn.andSelf || jQuery.fn.addBack;
+
+jQuery.fn.andSelf = function() {
+	migrateWarn( "jQuery.fn.andSelf() replaced by jQuery.fn.addBack()" );
+	return oldSelf.apply( this, arguments );
+};
+
+
+var oldDeferred = jQuery.Deferred,
+	tuples = [
+
+		// Action, add listener, callbacks, .then handlers, final state
+		[ "resolve", "done", jQuery.Callbacks( "once memory" ),
+			jQuery.Callbacks( "once memory" ), "resolved" ],
+		[ "reject", "fail", jQuery.Callbacks( "once memory" ),
+			jQuery.Callbacks( "once memory" ), "rejected" ],
+		[ "notify", "progress", jQuery.Callbacks( "memory" ),
+			jQuery.Callbacks( "memory" ) ]
+	];
+
+jQuery.Deferred = function( func ) {
+	var deferred = oldDeferred(),
+		promise = deferred.promise();
+
+	deferred.pipe = promise.pipe = function( /* fnDone, fnFail, fnProgress */ ) {
+		var fns = arguments;
+
+		migrateWarn( "deferred.pipe() is deprecated" );
+
+		return jQuery.Deferred( function( newDefer ) {
+			jQuery.each( tuples, function( i, tuple ) {
+				var fn = jQuery.isFunction( fns[ i ] ) && fns[ i ];
+
+				// Deferred.done(function() { bind to newDefer or newDefer.resolve })
+				// deferred.fail(function() { bind to newDefer or newDefer.reject })
+				// deferred.progress(function() { bind to newDefer or newDefer.notify })
+				deferred[ tuple[ 1 ] ]( function() {
+					var returned = fn && fn.apply( this, arguments );
+					if ( returned && jQuery.isFunction( returned.promise ) ) {
+						returned.promise()
+							.done( newDefer.resolve )
+							.fail( newDefer.reject )
+							.progress( newDefer.notify );
+					} else {
+						newDefer[ tuple[ 0 ] + "With" ](
+							this === promise ? newDefer.promise() : this,
+							fn ? [ returned ] : arguments
+						);
+					}
+				} );
+			} );
+			fns = null;
+		} ).promise();
+
+	};
+
+	if ( func ) {
+		func.call( deferred, deferred );
+	}
+
+	return deferred;
+};
+
+
+
+})( jQuery, window );
